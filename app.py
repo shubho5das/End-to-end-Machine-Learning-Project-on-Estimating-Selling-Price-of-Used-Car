@@ -20,7 +20,7 @@ def main():
 
     Kms_Driven = st.number_input('How many kilometers has the car run?', 0.00, 500000.00, step=500.00, key ='drived')
 
-    Owner = st.radio("How many owners did the car have?", (0, 1, 3), key='owner')
+    Owner = st.radio("How many owners did the car have before you?", (0, 1, 3), key='owner')
 
     Fuel_Type_Petrol = st.selectbox('What is the fuel type of the car ?',('Petrol','Diesel', 'CNG'), key='fuel')
     if(Fuel_Type_Petrol=='Petrol'):
