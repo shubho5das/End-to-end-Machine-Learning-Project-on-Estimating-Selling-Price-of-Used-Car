@@ -6,8 +6,7 @@ def main():
     string = "Car Price Predictor"
     st.set_page_config(page_title=string) 
     st.title("Car Price Predictor")
-    ## st.markdown("##### Are you planning to sell your car !?\n##### So let's try evaluating the price.. 🤖 ")
-    st.markdown("#### Planning to sell your car, but don't know the price you'll get for it?\n#### Don't worry, you are at the right place. Answer the questions below, and know the current valuation of your car.")
+    st.markdown("##### Planning to sell your car, but don't know the price you'll get for it?\n##### Don't worry, you are at the right place. Answer the questions below, and know the current valuation of your car.")
     st.image(
             "https://imgd.aeplcdn.com/664x374/cw/cars/discontinued/maruti-suzuki/800-1986-1997.jpg",
             width=400, # Manually Adjust the width of the image as per requirement
@@ -16,8 +15,7 @@ def main():
     st.write('')
     years = st.number_input('In which year did you purchase the car?',1990, 2021, step=1, key ='year')
     Years_old = 2021-years
-
-    #Present_Price = st.number_input('What is the current ex-showroom price of the car ?  (In ₹lakhs)', 0.00, 50.00, step=0.5, key ='present_price')
+    
     Present_Price = st.number_input('What was the showroom price of the car at the time of purchase ?(in ₹lakhs)', 0.00, 50.00, step=0.5, key ='present_price')
 
     Kms_Driven = st.number_input('How many kilometers has the car run?', 0.00, 500000.00, step=500.00, key ='drived')
@@ -55,7 +53,6 @@ def main():
             if output<0:
                 st.warning("You will be not able to sell this car !!")
             else:
-                #st.success("You can sell the car for {} lakhs 🙌".format(output))
                 st.success("Estimated Selling Price: {} lakhs".format(output))
         except:
             st.warning("Opps!! Something went wrong\nTry again")
